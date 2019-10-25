@@ -16,9 +16,9 @@ class Player
 		// fwrite($stderr, "0" . $game_state['community_cards'][0]['rank']);
 
 
-		// elseif ($my_cards[0]['rank'] == $game_state['community_cards'][0]['rank']) {
-		// 	return 500;
-		// }
+		elseif ($my_cards[0]['rank'] == $game_state['community_cards'][0]['rank']) {
+			return 500;
+		}
 
 		
 		// elseif ($my_cards[0]['rank'] == $game_state['community_cards'][1]['rank']) {
