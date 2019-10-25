@@ -13,9 +13,19 @@ class Player
 
 		fwrite($stderr, " \n First: " . $my_cards[0]['rank']);
 		fwrite($stderr, " \n Second: " . $my_cards[1]['rank'] . "\r\n");
-    	
 
-    	
+
+		 // fwrite($stderr, " \n Print Array Samo " . var_export($game_state));
+		// create array of community cards
+		$arrayComm = Array();
+		foreach ($game_state['community_cards'] as $value) {
+    		$arrayComm[] = $value['suit'];
+    	}
+		$arrayComm[] = $my_cards[0]['suit'];
+		$arrayComm[] = $my_cards[1]['suit'];
+
+		fwrite($stderr, " \n Print Array Samo " . json_encode($arrayComm);
+		
 		foreach ($game_state['community_cards'] as $value) {
     		fwrite($stderr, " \n CommunityCard: " . $value['rank']);
     		if ($my_cards[0]['rank'] == $value['rank'] || $my_cards[1]['rank'] == $value['rank']) {
