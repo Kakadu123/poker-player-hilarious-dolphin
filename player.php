@@ -48,18 +48,23 @@ class Player
     		return 10000;
     	}
 
+    	fwrite($stderr, " \n spades " . $spades);
+    	fwrite($stderr, " \n clubs " . $clubs);
+    	fwrite($stderr, " \n hearts " . $hearts);
+    	fwrite($stderr, " \n diamonds " . $diamonds);
+
 		// fwrite($stderr, " \n Print Array Samo " . json_encode($arrayComm);
 		
 		foreach ($game_state['community_cards'] as $value) {
     		fwrite($stderr, " \n CommunityCard: " . $value['rank']);
     		if ($my_cards[0]['rank'] == $value['rank'] || $my_cards[1]['rank'] == $value['rank']) {
-    			return 600;	
+    			return 1000;	
     		}
     	}
 
     	if($my_cards[0]['rank'] == $my_cards[1]['rank']) {
     		fwrite($stderr, "\r\n YAY! A pair\n");
-        	return 600;
+        	return 1000;
     	}
         else {
         	fwrite($stderr, "\r\n NAY! No pair\n");
