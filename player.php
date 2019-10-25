@@ -58,13 +58,13 @@ class Player
 		foreach ($game_state['community_cards'] as $value) {
     		fwrite($stderr, " \n CommunityCard: " . $value['rank']);
     		if ($my_cards[0]['rank'] == $value['rank'] || $my_cards[1]['rank'] == $value['rank']) {
-    			return 1000;	
+    			return 300;	
     		}
     	}
 
     	if($my_cards[0]['rank'] == $my_cards[1]['rank']) {
     		fwrite($stderr, "\r\n YAY! A pair\n");
-        	return 1000;
+        	return 300;
     	}
         else {
         	fwrite($stderr, "\r\n NAY! No pair\n");
