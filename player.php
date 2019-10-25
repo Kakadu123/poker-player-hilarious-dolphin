@@ -13,26 +13,25 @@ class Player
         	return 700;
     	}
     	
-		fwrite($stderr, "2" . $game_state['community_cards'][2]['rank']);
-
+		fwrite($stderr, "0" . $game_state['community_cards'][0]['rank']);
 
 
 		elseif ($my_cards[0]['rank'] == $game_state['community_cards'][0]['rank']) {
 			return 500;
 		}
-		elseif ($my_cards[0]['rank'] == $game_state['community_cards'][1]['rank']) {
-			return 500;
-		}
-		elseif ($my_cards[0]['rank'] == $game_state['community_cards'][2]['rank']) {
-			return 500;
-		}
-		elseif ($my_cards[1]['rank'] == $game_state['community_cards'][0]['rank']) {
-			return 500;
-		}
-		elseif ($my_cards[1]['rank'] == $game_state['community_cards'][1]['rank']) {
-			return 500;
-		}
-		elseif ($my_cards[1]['rank'] == $game_state['community_cards'][2]['rank']) {
+		// elseif ($my_cards[0]['rank'] == $game_state['community_cards'][1]['rank']) {
+		// 	return 500;
+		// }
+		// elseif ($my_cards[0]['rank'] == $game_state['community_cards'][2]['rank']) {
+		// 	return 500;
+		// }
+		// elseif ($my_cards[1]['rank'] == $game_state['community_cards'][0]['rank']) {
+		// 	return 500;
+		// }
+		// elseif ($my_cards[1]['rank'] == $game_state['community_cards'][1]['rank']) {
+		// 	return 500;
+		// }
+		// elseif ($my_cards[1]['rank'] == $game_state['community_cards'][2]['rank']) {
 			fwrite($stderr, "NAY! No pair\n");
 			return 500;
 		}
