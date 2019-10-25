@@ -9,7 +9,7 @@ class Player
     	$stderr =  fopen('php://stderr', 'w');
     	$my_cards = $game_state['players'][$game_state['in_action']]['hole_cards'];
     	
-		fwrite($stderr, " \r\n\r\n New Turnaj");
+		fwrite($stderr, " \r\n\r\n New Turnaj\n");
 
 		fwrite($stderr, " \n First: " . $my_cards[0]['rank']);
 		fwrite($stderr, " \n Second: " . $my_cards[1]['rank'] . "\r\n");
