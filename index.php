@@ -2,6 +2,8 @@
 
 require_once('player.php');
 
+
+
 $player = new Player();
 
 switch($_POST['action'])
