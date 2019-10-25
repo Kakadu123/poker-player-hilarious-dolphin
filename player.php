@@ -13,12 +13,14 @@ class Player
         	return 700;
     	}
     	
-		fwrite($stderr, "0" . $game_state['community_cards'][0]['rank']);
+		// fwrite($stderr, "0" . $game_state['community_cards'][0]['rank']);
 
 
-		elseif ($my_cards[0]['rank'] == $game_state['community_cards'][0]['rank']) {
-			return 500;
-		}
+		// elseif ($my_cards[0]['rank'] == $game_state['community_cards'][0]['rank']) {
+		// 	return 500;
+		// }
+
+		
 		// elseif ($my_cards[0]['rank'] == $game_state['community_cards'][1]['rank']) {
 		// 	return 500;
 		// }
@@ -32,9 +34,9 @@ class Player
 		// 	return 500;
 		// }
 		// elseif ($my_cards[1]['rank'] == $game_state['community_cards'][2]['rank']) {
-			fwrite($stderr, "NAY! No pair\n");
-			return 500;
-		}
+		// 	fwrite($stderr, "NAY! No pair\n");
+		// 	return 500;
+		// }
         else {
         	fwrite($stderr, "NAY! No pair\n");
         	return 0;
