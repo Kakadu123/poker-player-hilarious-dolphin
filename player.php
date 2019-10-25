@@ -16,8 +16,8 @@ class Player
 		
 
 
-
-
+		fwrite($stderr, " \n Print Array Samo " . print_r($game_state));
+    	
 
 
 		foreach ($game_state['community_cards'] as $key => $value) {
