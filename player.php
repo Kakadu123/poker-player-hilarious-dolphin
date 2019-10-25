@@ -6,17 +6,17 @@ class Player
 
     public function betRequest($game_state)
     {
-
+    	$stderr =  fopen('php://stderr', 'w');
     	$my_cards = $game_state['players'][$game_state['in_action']]['hole_cards'];
     	if($my_cards[0]['rank'] == $my_cards[1]['rank']) {
 
-    		fwrite(STDERR, "YAY! A pair\n");
+    		fwrite($stderr, "YAY! A pair\n");
         	return 10000;
     	}
     		
         else {
 
-        	fwrite(STDERR, "NAY! No pair\n");
+        	fwrite($stderr, "NAY! No pair\n");
         	return 0;
         }
     }
