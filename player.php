@@ -9,7 +9,12 @@ class Player
     	$stderr =  fopen('php://stderr', 'w');
     	$my_cards = $game_state['players'][$game_state['in_action']]['hole_cards'];
     	
+
+		fwrite($stderr, "First" . $my_cards[0]['rank']);
+		fwrite($stderr, "Second" . $my_cards[1]['rank']);
+		
 		foreach ($game_state['community_cards'] as $key => $value) {
+    		fwrite($stderr, $value['rank']);
     		if ($my_cards[0]['rank'] == $value['rank'] || $my_cards[1]['rank'] == $value['rank']) {
     			return 500;	
     		}
