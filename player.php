@@ -16,7 +16,7 @@ class Player
 		
 
 
-		// fwrite($stderr, " \n Print Array Samo " . print_r($game_state));
+		 fwrite($stderr, " \n Print Array Samo " . var_export($game_state));
     	
 
 
