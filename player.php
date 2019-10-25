@@ -9,21 +9,27 @@ class Player
     	$stderr =  fopen('php://stderr', 'w');
     	$my_cards = $game_state['players'][$game_state['in_action']]['hole_cards'];
     	
-		fwrite($stderr, " \r\n\r\n\n\n\n\n New Turnaj");
+		fwrite($stderr, " \r\n\r\n New Turnaj");
 
 		fwrite($stderr, " \n First: " . $my_cards[0]['rank']);
 		fwrite($stderr, " \n Second: " . $my_cards[1]['rank']);
 		
+
+
+
+
+
+
 		foreach ($game_state['community_cards'] as $key => $value) {
-    		fwrite($stderr, $value['rank']);
+    		fwrite($stderr, " \n CommunityCard: " . $value['rank']);
     		if ($my_cards[0]['rank'] == $value['rank'] || $my_cards[1]['rank'] == $value['rank']) {
-    			return 1000;	
+    			return 500;	
     		}
     	}
 
     	if($my_cards[0]['rank'] == $my_cards[1]['rank']) {
     		fwrite($stderr, "\n YAY! A pair\n");
-        	return 1000;
+        	return 500;
     	}
         else {
         	fwrite($stderr, "NAY! No pair\n");
