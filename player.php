@@ -45,7 +45,7 @@ class Player
     	}
 
     	if($spades >= 5 || $clubs >= 5 || $hearts >= 5 || $diamonds >= 5 ) {
-    		return 400;
+    		return 800;
     	}
 
     	fwrite($stderr, " \n spades " . $spades);
