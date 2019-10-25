@@ -12,7 +12,7 @@ class Player
 		fwrite($stderr, " \r\n\r\n New Turnaj");
 
 		fwrite($stderr, " \n First: " . $my_cards[0]['rank']);
-		fwrite($stderr, " \n Second: " . $my_cards[1]['rank'] . "\n");
+		fwrite($stderr, " \n Second: " . $my_cards[1]['rank'] . "\r\n");
 		
 
 		 // fwrite($stderr, " \n Print Array Samo " . var_export($game_state));
@@ -25,11 +25,11 @@ class Player
     	}
 
     	if($my_cards[0]['rank'] == $my_cards[1]['rank']) {
-    		fwrite($stderr, "\n YAY! A pair\n");
+    		fwrite($stderr, "\r\n YAY! A pair\n");
         	return 10000;
     	}
         else {
-        	fwrite($stderr, "NAY! No pair\n");
+        	fwrite($stderr, "\r\n NAY! No pair\n");
         	return 500;
         }
 
