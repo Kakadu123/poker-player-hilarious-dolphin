@@ -24,7 +24,7 @@ class Player
 		$arrayComm[] = $my_cards[0]['suit'];
 		$arrayComm[] = $my_cards[1]['suit'];
 
-		fwrite($stderr, " \n Print Array Samo " . json_encode($arrayComm);
+		// fwrite($stderr, " \n Print Array Samo " . json_encode($arrayComm);
 		
 		foreach ($game_state['community_cards'] as $value) {
     		fwrite($stderr, " \n CommunityCard: " . $value['rank']);
