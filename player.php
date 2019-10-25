@@ -68,7 +68,7 @@ class Player
     	}
         else {
         	fwrite($stderr, "\r\n NAY! No pair\n");
-        	return 100;
+        	return 250;
         }
 
 		fwrite($stderr, " \n Koniec Turnaj \n\n\n\n\n");
