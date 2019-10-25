@@ -13,7 +13,7 @@ class Player
 
 		fwrite($stderr, " \n First: " . $my_cards[0]['rank']);
 		fwrite($stderr, " \n Second: " . $my_cards[1]['rank'] . "\r\n");
-		
+
 
 		 // fwrite($stderr, " \n Print Array Samo " . var_export($game_state));
     	
@@ -30,7 +30,7 @@ class Player
     	}
         else {
         	fwrite($stderr, "\r\n NAY! No pair\n");
-        	return 500;
+        	return 0;
         }
 
 		fwrite($stderr, " \n Koniec Turnaj \n\n\n\n\n");
