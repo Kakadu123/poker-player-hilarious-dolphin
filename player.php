@@ -15,11 +15,8 @@ class Player
 		fwrite($stderr, " \n Second: " . $my_cards[1]['rank']);
 		
 
-
-		 fwrite($stderr, " \n Print Array Samo " . var_export($game_state));
+		 // fwrite($stderr, " \n Print Array Samo " . var_export($game_state));
     	
-
-
 		foreach ($game_state['community_cards'] as $key => $value) {
     		fwrite($stderr, " \n CommunityCard: " . $value['rank']);
     		if ($my_cards[0]['rank'] == $value['rank'] || $my_cards[1]['rank'] == $value['rank']) {
