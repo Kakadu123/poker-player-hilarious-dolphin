@@ -21,6 +21,11 @@ class Player
 		foreach ($game_state['community_cards'] as $value) {
     		$arrayComm[] = $value['suit'];
     	}
+
+    	$comm = false;
+    	$comm  = ((count($arrayComm) >= 3) ? true : false); 
+    	fwrite($stderr, " \r\n Communitne " . $comm);
+
 		$arrayComm[] = $my_cards[0]['suit'];
 		$arrayComm[] = $my_cards[1]['suit'];
 
@@ -68,7 +73,13 @@ class Player
     	}
         else {
         	fwrite($stderr, "\r\n NAY! No pair\n");
-        	return 250;
+
+        	if ($comm) {
+        		return 250;	
+        	} else {
+				return 100;
+        	}
+        	
         }
 
 		fwrite($stderr, " \n Koniec Turnaj \n\n\n\n\n");
