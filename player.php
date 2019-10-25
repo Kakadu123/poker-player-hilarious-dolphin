@@ -75,9 +75,9 @@ class Player
         	fwrite($stderr, "\r\n NAY! No pair\n");
 
         	if ($comm) {
-        		return 250;	
+        		return 550;	
         	} else {
-				return 100;
+				return 50;
         	}
         	
         }
