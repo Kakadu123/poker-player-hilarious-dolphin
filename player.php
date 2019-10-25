@@ -24,6 +24,30 @@ class Player
 		$arrayComm[] = $my_cards[0]['suit'];
 		$arrayComm[] = $my_cards[1]['suit'];
 
+		$spades = 0;
+		$clubs = 0;
+		$hearts = 0;
+		$diamonds = 0;
+
+		foreach ($arrayComm as $value) {
+    		 if ($value == 'spades') {
+    		 	$spades++;	
+    		 }
+    		 if ($value == 'clubs') {
+    		 	$clubs++;	
+    		 }
+			if ($value == 'hearts') {
+    		 	$hearts++;	
+    		 }
+    		 if ($value == 'diamonds') {
+    		 	$diamonds++;	
+    		 }   		 
+    	}
+
+    	if($spades >= 5 || $clubs >= 5 || $hearts >= 5 || $diamonds >= 5 ) {
+    		return 10000;
+    	}
+
 		// fwrite($stderr, " \n Print Array Samo " . json_encode($arrayComm);
 		
 		foreach ($game_state['community_cards'] as $value) {
