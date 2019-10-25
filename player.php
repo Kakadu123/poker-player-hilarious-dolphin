@@ -6,6 +6,7 @@ class Player
 
     public function betRequest($game_state)
     {
+        echo 'betRequest';
         return 0;
     }
 
