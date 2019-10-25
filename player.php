@@ -13,16 +13,7 @@ class Player
 
 		fwrite($stderr, " \n First: " . $my_cards[0]['rank']);
 		fwrite($stderr, " \n Second: " . $my_cards[1]['rank'] . "\r\n");
-
-
-		 // fwrite($stderr, " \n Print Array Samo " . var_export($game_state));
-
-		// foreach ($game_state['community_cards'] as $value) {
-  //   		fwrite($stderr, " \n CommunityCard: " . $value['rank']);
-  //   		if ($my_cards[0]['rank'] == $value['rank'] || $my_cards[1]['rank'] == $value['rank']) {
-  //   			return 600;	
-  //   		}
-  //   	}
+    	
 
     	
 		foreach ($game_state['community_cards'] as $value) {
@@ -38,7 +29,7 @@ class Player
     	}
         else {
         	fwrite($stderr, "\r\n NAY! No pair\n");
-        	return 10000;
+        	return 100;
         }
 
 		fwrite($stderr, " \n Koniec Turnaj \n\n\n\n\n");
