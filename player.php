@@ -24,7 +24,7 @@ class Player
 
     	$comm = false;
     	$comm  = ((count($arrayComm) >= 3) ? true : false); 
-    	fwrite($stderr, " \r\n Communitne " . $comm);
+    	// fwrite($stderr, " \r\n Communitne " . $comm);
 
 		$arrayComm[] = $my_cards[0]['suit'];
 		$arrayComm[] = $my_cards[1]['suit'];
